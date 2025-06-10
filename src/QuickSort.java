@@ -1,10 +1,14 @@
 import java.time.chrono.MinguoChronology;
+import java.util.HashSet;
+import java.util.LinkedList;
+import java.util.Set;
 
 public class QuickSort {
 
 	public static void quickSort(int[] arr , int left , int right){
 		if(left > right ) return;
 
+		LinkedList list = new LinkedList<>();
 		int pivot = arr[left];
 		int start = left + 1;
 		int end = right;
