@@ -41,7 +41,7 @@ class SegmentTree {
 
 	public SegmentTree(long[] arr) {
 		this.n = arr.length;
-		tree = new long[4 * n];
+		this.tree = new long[4 * n];
 		build(arr, 1, 0, n - 1);
 	}
 
