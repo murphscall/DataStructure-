@@ -1,19 +1,36 @@
-public class MyArrayDeque {
+package queue;
+
+public class MyQueue<T> {
+
 	private Object[] elements;
 	private int size;
 	private int front;
 	private int rear;
 	private static final int DEFAULT_CAPACITY = 10;
 
-	public MyArrayDeque() {
+	public MyQueue() {
 		elements = new Object[DEFAULT_CAPACITY];
 		size = 0;
 		front = 0;
 		rear = 0;
 	}
 
-	private int capacity() {
-		return elements.length;
+
+	public void offer(Object element){
+		if(size == elements.length){
+			grow();
+		}
+		elements[rear] = element;
+		rear = (rear + 1) % elements.length;
+		size++;
+	}
+
+	public T poll(){
+		T value = (T) elements[front];
+		elements[front] = null;
+		front = (front + 1) % elements.length;
+		size--;
+		return value;
 	}
 
 	private void grow() {
@@ -26,7 +43,4 @@ public class MyArrayDeque {
 		front = 0;
 		rear = size;
 	}
-
-
-
 }

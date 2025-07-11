@@ -1,3 +1,4 @@
+package stack;
 
 public class MyStack<T> {
 	private Object[] elements;
