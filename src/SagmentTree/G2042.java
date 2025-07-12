@@ -56,6 +56,8 @@ class SegmentTree {
 		build(arr, node * 2, start, mid);
 		build(arr, node * 2 + 1, mid + 1, end);
 		tree[node] = tree[node * 2] + tree[node * 2 + 1];
+
+		//
 	}
 
 	public void update(int node, int start, int end, int idx, long newValue) {
