@@ -1,4 +1,4 @@
-package bfs;
+package graph.bfs;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -77,4 +77,4 @@ public class BFS {
 
 // 너비 우선 탐색
 // 가중치가 없는 그래프에서 최단 경로나 최소 이동 횟수를 구하는 문제에 최적화된 알고리즘
-// bfs.BFS 큐(Queue) 자료구조를 이용해서 동작
+// graph.bfs.BFS 큐(Queue) 자료구조를 이용해서 동작
